@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#038C7F">
+
+    <!-- TextView para el título -->
+
+    <!-- Botones de filtro de tareas -->
+
+    <TextView
+        android:id="@+id/tvAllTasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="169dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="casual"
+        android:text="Todas las tareas"
+        android:textColor="#ADD9D1"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAllTasks"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPending"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#324854"
+            android:fontFamily="serif-monospace"
+            android:text="Pendiente"
+            android:textColor="#ADD9D1" />
+
+        <Button
+            android:id="@+id/btnCompleted"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#324854"
+            android:fontFamily="serif-monospace"
+            android:text="Completada"
+            android:textColor="#ADD9D1" />
+    </LinearLayout>
+
+    <!-- RecyclerView para mostrar las tareas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTasks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/btnAddTask"
+        android:layout_below="@id/linearLayout"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fontFamily="casual"
+        android:paddingBottom="16dp" />
+
+    <!-- Botón para agregar tareas -->
+
+    <!-- Layout inferior con botones de navegación -->
+
+    <Button
+        android:id="@+id/btnAddTask"
+        android:layout_width="396dp"
+        android:layout_height="63dp"
+        android:layout_above="@id/bottomNavigation"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="13dp"
+        android:backgroundTint="#324854"
+        android:fontFamily="serif-monospace"
+        android:text="Agregar tareas"
+        android:textColor="#ADD9D1" />
+
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_alignParentBottom="true"
+        android:background="#324854"
+        android:fontFamily="serif-monospace"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#324854"
+            android:fontFamily="serif-monospace"
+            android:text="Home"
+            android:textColor="#ADD9D1" />
+
+        <Button
+            android:id="@+id/btnTasks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#324854"
+            android:fontFamily="serif-monospace"
+            android:text="Tareas"
+            android:textColor="#ADD9D1" />
+    </LinearLayout>
+
+</RelativeLayout>

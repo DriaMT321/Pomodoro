@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#038C7F">
+
+    <!-- Botones para seleccionar el modo -->
+    <LinearLayout
+        android:id="@+id/modeButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPomodoro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#324854"
+            android:fontFamily="serif-monospace"
+            android:text="Pomodoro"
+            android:textColor="#ADD9D1" />
+
+        <Button
+            android:id="@+id/btnShortBreak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#324854"
+            android:fontFamily="serif-monospace"
+            android:text="Descanso corto"
+            android:textColor="#ADD9D1" />
+
+        <Button
+            android:id="@+id/btnLongBreak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#324854"
+            android:fontFamily="serif-monospace"
+            android:text="Descanso largo"
+            android:textColor="#ADD9D1" />
+    </LinearLayout>
+
+    <!-- TextView para mostrar la tarea seleccionada -->
+    <TextView
+        android:id="@+id/tvTaskName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/progressBar"
+        android:layout_below="@id/modeButtons"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="serif-monospace"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#ADD9D1"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- ProgressBar circular -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:backgroundTint="#324854"
+        android:backgroundTintMode="screen"
+        android:fontFamily="serif-monospace"
+        android:foregroundTint="#324854"
+        android:indeterminate="false"
+        android:indeterminateTint="#027373"
+        android:indeterminateTintMode="src_in"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="#324854"
+        android:progressTintMode="add"
+        android:rotation="270"
+        android:secondaryProgressTint="#324854"
+        android:secondaryProgressTintMode="add" />
+
+    <!-- TextViews para mostrar el tiempo -->
+    <TextView
+        android:id="@+id/tvMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="serif-monospace"
+        android:text="25"
+        android:textColor="#324854"
+        android:textSize="48sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSeconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMinutes"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="serif-monospace"
+        android:text="00"
+        android:textColor="#324854"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Botón para iniciar/detener el temporizador -->
+    <Button
+        android:id="@+id/btnStartStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#324854"
+        android:fontFamily="serif-monospace"
+        android:text="Iniciar"
+        android:textColor="#ADD9D1" />
+
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#f2f2f2"
+        android:backgroundTint="#324854"
+        android:fontFamily="serif-monospace"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#324854"
+            android:fontFamily="serif-monospace"
+            android:text="Home"
+            android:textColor="#ADD9D1" />
+
+        <Button
+            android:id="@+id/btnTasks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#324854"
+            android:fontFamily="serif-monospace"
+            android:text="Tareas"
+            android:textColor="#ADD9D1" />
+    </LinearLayout>
+
+</RelativeLayout>

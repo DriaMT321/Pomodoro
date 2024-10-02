@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#038C7F"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Título Superior -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="casual"
+        android:text="Añadir nueva tarea"
+        android:textColor="#ADD9D1"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Input para el Nombre de la Tarea -->
+    <EditText
+        android:id="@+id/etTaskName"
+        android:layout_width="match_parent"
+        android:layout_height="114dp"
+        android:layout_marginBottom="16dp"
+        android:background="#01334E"
+        android:backgroundTint="#027373"
+        android:fontFamily="serif-monospace"
+        android:hint="Nombre de la Tarea"
+        android:inputType="textPersonName"
+        android:textColor="#ADD9D1"
+        android:textColorHint="#ADD9D1" />
+
+    <!-- Input para la Descripción de la Tarea -->
+    <EditText
+        android:id="@+id/etTaskDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="#01334E"
+        android:backgroundTint="#027373"
+        android:fontFamily="serif-monospace"
+        android:gravity="top"
+        android:hint="Descripción"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:textColor="#ADD9D1"
+        android:textColorHint="#ADD9D1" />
+
+    <!-- Selector de Tiempo para la Tarea -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="casual"
+        android:text="Tiempo de trabajo (minutos)"
+        android:textColor="#ADD9D1" />
+
+    <!-- Botón para Guardar la Tarea -->
+    <Spinner
+        android:id="@+id/spinnerTaskTime"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#027373"
+        android:foregroundTint="#ADD9D1" />
+
+    <Button
+        android:id="@+id/btnSaveTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="#324854"
+        android:text="Hecho"
+        android:textColor="#ADD9D1" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Pomodoro" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:statusBarColor">#038C7F</item>
+        <!-- Cambiar el color del texto e íconos en la barra de estado -->
+        <item name="android:windowLightStatusBar">true</item> <!-- true para íconos oscuros, false para claros -->
+    </style>
+</resources>
